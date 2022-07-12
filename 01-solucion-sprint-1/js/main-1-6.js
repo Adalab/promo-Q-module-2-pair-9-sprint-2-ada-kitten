@@ -4,7 +4,7 @@ const listElement = document.querySelector('.js-list');
 const kittenData_1 = {
     image: "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
     name: "Anastacio",
-    desc: "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
+    desc: "Risueño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!",
     race: "British Shorthair",
 };
 const kittenData_2 = {

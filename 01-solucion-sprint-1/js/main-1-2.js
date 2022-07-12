@@ -9,7 +9,7 @@ Repetir este proceso por cada gatito */
 const kittenImageOne = "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg";
 const kittenNameOne = "Anastacio";
 const kittenDescOne =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
+  "Risueño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRaceOne = "British Shorthair"
 
 const kittenOne =

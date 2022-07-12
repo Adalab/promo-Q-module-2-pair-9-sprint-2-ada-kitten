@@ -1,6 +1,9 @@
-const listElement = document.querySelector('.js-list');
+//1. Filtrar por descripción
+const searchButton = document.querySelector('.js-button-search');
+const input_search_desc = document.querySelector('.js_in_search_desc');
+const input_search_race = document.querySelector('.js_in_search_race');
 
-//1. Convertir cada gatito en un objeto
+
 const kittenData_1 = {
     image: "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
     name: "Anastacio",
@@ -22,26 +25,6 @@ const kittenData_3 = {
 
 const kittenDataList = [kittenData_1, kittenData_2, kittenData_3];
 
-//2. Crear listado de gatitos
-//Modifica la función renderKitten() para que reciba un listado como parámetro. 
-function renderKitten(kittenData) {
-    const kitten = `<li class="card">
-    <article>
-      <img
-        class="card_img"
-        src=${kittenData.url}
-        alt="gatito"
-      />
-      <h3 class="card_title">${kittenData.name}</h3>
-      <h3 class="card_race">${kittenData.race}</h3>
-      <p class="card_description">
-      ${kittenData.desc}
-      </p>
-    </article>
-    </li>`;
-    return kitten;
-}
-
 function renderKittenList(kittenDataList) {
     listElement.innerHTML = "";
     for (const kittenItem of kittenDataList) {
@@ -49,17 +32,19 @@ function renderKittenList(kittenDataList) {
     }
 }
 
-renderKittenList(kittenDataList);
-
-
-//2. Modifica la función Filtrar por descripción
 function filterKitten(event) {
     event.preventDefault();
     const descrSearchText = input_search_desc.value;
+    const raceSearchText = input_search_race.value;
+
     listElement.innerHTML = "";
-    for (const kittenItem of kittenDataList) {
-        if (kittenItem.desc.includes(descrSearchText)) {
-            listElement.innerHTML += renderKitten(kittenItem);
-        }
-    }
+
+    const dataKittenFiltered = kittenDataList
+        .filter((kitten) => kitten.desc.includes(descrSearchText))
+        //2. Filtrar por raza además
+        .filter(kitten => kitten.race === raceSearchText)
+
+    renderKittenList(dataKittenFiltered);
 }
+
+searchButton.addEventListener("click", filterKitten);

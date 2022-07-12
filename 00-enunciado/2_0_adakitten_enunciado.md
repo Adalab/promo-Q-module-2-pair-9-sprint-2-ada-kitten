@@ -93,7 +93,7 @@ const kittenOne = `<li class="card">
   />
   <h3 class="card_title">Anastacio</h3>
   <p class="card_description">
-    Ruiseño, juguetón, le guta estar tranquilo y que nadie le
+    Risueño, juguetón, le guta estar tranquilo y que nadie le
     moleste. Es una maravilla acariciarle!
   </p>
 </article>

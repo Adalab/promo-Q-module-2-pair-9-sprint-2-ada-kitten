@@ -121,6 +121,7 @@ function cancelNewKitten(event) {
 function filterKitten(event) {
     event.preventDefault();
     const descrSearchText = input_search_desc.value;
+    const raceSearchText = input_search_race.value;
     listElement.innerHTML = "";
     const dataKittenFiltered = kittenDataList
         .filter((kitten) => kitten.desc.includes(descrSearchText))
